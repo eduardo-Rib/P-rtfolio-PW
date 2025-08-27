@@ -1,0 +1,251 @@
+/* ===== PÁGINA DE CURRÍCULO ===== */
+.curriculo {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo-curriculo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--spacing-xl) 0 var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.page-title {
+    color: var(--primary-color);
+}
+
+.btn-download {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-download:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    color: white;
+}
+
+/* Acordeão */
+.accordion-item {
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background-color: var(--card-background);
+}
+
+.accordion-toggle {
+    display: none;
+}
+
+.accordion-label {
+    display: block;
+    padding: var(--spacing-md);
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-label:hover {
+    background-color: var(--primary-dark);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.accordion-toggle:checked ~ .accordion-content {
+    max-height: 2000px; /* Valor alto suficiente para conter o conteúdo */
+}
+
+.curriculo-item {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.curriculo-item:last-child {
+    border-bottom: none;
+}
+
+.date-info, .role-info {
+    display: block;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.btn-link {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Lista de cursos e experiências */
+.cursos-lista {
+    list-style: none;
+}
+
+.cursos-lista li {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cursos-lista li:last-child {
+    border-bottom: none;
+}
+
+.curso-detalhes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.curso-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Seção de habilidades */
+.habilidades-box {
+    padding: var(--spacing-md);
+}
+
+.habilidades-box h4 {
+    color: var(--primary-color);
+    margin: var(--spacing-md) 0 var(--spacing-sm);
+}
+
+.habilidades-box h4:first-child {
+    margin-top: 0;
+}
+
+.habilidades-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.habil-tag {
+    padding: 0.4rem 0.8rem;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Cores específicas para habilidades técnicas */
+.habil-tag.cpp {
+    background-color: rgba(0, 84, 152, 0.15);
+    color: #005498;
+}
+
+.habil-tag.python {
+    background-color: rgba(53, 114, 165, 0.15);
+    color: #3572A5;
+}
+
+.habil-tag.java {
+    background-color: rgba(236, 202, 202, 0.15);
+    color: #EC1C24;
+}
+
+.habil-tag.csharp {
+    background-color: rgba(92, 44, 146, 0.15);
+    color: #5C2C92;
+}
+
+.habil-tag.flask {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+.habil-tag.html {
+    background-color: rgba(227, 79, 38, 0.15);
+    color: #E34F26;
+}
+
+.habil-tag.css {
+    background-color: rgba(21, 114, 182, 0.15);
+    color: #1572B6;
+}
+
+.habil-tag.js {
+    background-color: rgba(247, 223, 30, 0.15);
+    color: #F7DF1E;
+}
+
+.habil-tag.ts {
+    background-color: rgba(47, 116, 192, 0.15);
+    color: #2F74C0;
+}
+
+.habil-tag.node {
+    background-color: rgba(140, 200, 75, 0.15);
+    color: #8CC84B;
+}
+
+.habil-tag.mysql {
+    background-color: rgba(0, 112, 187, 0.15);
+    color: #0070b7;
+}
+
+/* Responsividade para a página de currículo */
+@media (max-width: 768px) {
+    .titulo-curriculo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .curriculo-item, .curso-detalhes {
+        flex-direction: column;
+    }
+    
+    .btn-link {
+        align-self: flex-start;
+        margin-top: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion-label {
+        padding: var(--spacing-sm);
+    }
+    
+    .curriculo-item, .cursos-lista li, .habilidades-box {
+        padding: var(--spacing-sm);
+    }
+}
