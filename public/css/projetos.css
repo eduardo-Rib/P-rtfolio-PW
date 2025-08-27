@@ -1,0 +1,117 @@
+/* ===== PÁGINA DE PROJETOS ===== */
+.page-title {
+    text-align: center;
+    margin: var(--spacing-xl) 0;
+    color: var(--primary-color);
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.projeto-card {
+    background-color: var(--card-background);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.projeto-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem;
+}
+
+.projeto-card p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.tech-tag {
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+}
+
+/* Cores específicas para tecnologias */
+.tech-tag.python {
+    background-color: rgba(53, 114, 165, 0.15);
+    color: #3572A5;
+}
+
+.tech-tag.flask {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000000;
+}
+
+.tech-tag.mysql {
+    background-color: rgba(0, 112, 187, 0.15);
+    color: #0070b7;
+}
+
+.tech-tag.html {
+    background-color: rgba(227, 79, 38, 0.15);
+    color: #E34F26;
+}
+
+.tech-tag.css {
+    background-color: rgba(21, 114, 182, 0.15);
+    color: #1572B6;
+}
+
+.tech-tag.js {
+    background-color: rgba(247, 223, 30, 0.15);
+    color: #F7DF1E;
+}
+
+.tech-tag.ts {
+    background-color: rgba(47, 116, 192, 0.15);
+    color: #2F74C0;
+}
+
+.tech-tag.node {
+    background-color: rgba(140, 200, 75, 0.15);
+    color: #8CC84B;
+}
+
+.tech-tag.java {
+    background-color: rgba(236, 202, 202, 0.15);
+    color: #EC1C24;
+}
+
+/* Responsividade para a página de projetos */
+@media (max-width: 768px) {
+    .projetos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+}
